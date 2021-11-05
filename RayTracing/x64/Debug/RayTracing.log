@@ -1,4 +1,4 @@
 ﻿  Source.cpp
-C:\Users\Elizaveta\c++\RayTracing\RayTracing\Source.cpp(45,11): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\Elizaveta\c++\RayTracing\RayTracing\Source.cpp(46,11): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-  RayTracing.vcxproj -> C:\Users\Elizaveta\c++\RayTracing\x64\Debug\RayTracing.exe
+C:\Users\Elizaveta\c++\RayTracing\RayTracing\Sphere.hpp(22,3): error C2065: 'd': undeclared identifier
+C:\Users\Elizaveta\c++\RayTracing\RayTracing\Source.cpp(42,11): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Elizaveta\c++\RayTracing\RayTracing\Source.cpp(43,11): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data

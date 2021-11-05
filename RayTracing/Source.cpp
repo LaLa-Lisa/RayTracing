@@ -84,9 +84,12 @@ public:
 				olc::Pixel color = olc::BLUE;
 				color = is_floor(camera.c_point, ray) ? olc::WHITE : olc::BLUE;
 				for (auto& sph : balls) {
-					double intense = sph.is_hitted(camera.c_point, ray);
+					double intense = sph.is_hitted(camera.c_point, -1.0 * ray);
 					if (intense) {
-						color = olc::Pixel((int)(intense * 80) % 255, (int)(intense * 80) * 1000 % 255, (int)(intense * 80) * 100 % 255);
+						double col_intense = intense / ((camera.c_point - sph.center).lenght());
+						olc::Pixel col_white(255 - (int)(col_intense * 1000) % 255, 255 - (int)(col_intense * 1000) % 255, 255 - (int)(col_intense * 1000) % 255);
+						olc::Pixel col_blue(0, 0, 255 - (int)(col_intense * 1000) % 255);
+						color = is_floor(camera.c_point, sph.reflect_hit(intense, camera.c_point, ray)) ? col_white : col_blue;
 					}
 				}
 				res[i][j] = color;
@@ -109,8 +112,9 @@ public:
 		height(_height), 
 		scene(Scene(camera, _width, _height))
 	{
-		vec3d<double> ball_center(0, -20, 2);
+		vec3d<double> ball_center(0, -20, 10);
 		scene.add_ball(ball_center, 5);
+		//scene.add_ball(vec3d<double>(10, -10, 20), 2);
 	}
 	void print(std::vector<std::vector<olc::Pixel>> image) {
 		for (int i = 0; i < min(image.size(), width); ++i) {
@@ -144,22 +148,19 @@ public:
 			scene.camera.c_x = rotateByAxis(etalon_y, scene.camera.c_x, diffX / 200);
 			scene.camera.c_y = rotateByAxis(etalon_y, scene.camera.c_y, diffX / 200);
 			scene.camera.c_z = rotateByAxis(etalon_y, scene.camera.c_z, diffX / 200);
+		}
+		previousMousePos = { GetMouseX(), GetMouseY() };
 
-			previousMousePos = newMousePos;
-		}
-		else {
-			previousMousePos = { GetMouseX(), GetMouseY() };
-		}
 
 		double step = 1;
 		if (GetKey(olc::Key::W).bHeld) {
 			scene.camera.c_point = scene.camera.c_point + step * scene.camera.c_z;
 		}
 		if (GetKey(olc::Key::A).bHeld) {
-			scene.camera.c_point = scene.camera.c_point + -1.0 * step * scene.camera.c_x;
+			scene.camera.c_point = scene.camera.c_point - step * scene.camera.c_x;
 		}
 		if (GetKey(olc::Key::S).bHeld) {
-			scene.camera.c_point = scene.camera.c_point + -1.0 * step * scene.camera.c_z;
+			scene.camera.c_point = scene.camera.c_point - step * scene.camera.c_z;
 		}
 		if (GetKey(olc::Key::D).bHeld) {
 			scene.camera.c_point = scene.camera.c_point + step * scene.camera.c_x;
