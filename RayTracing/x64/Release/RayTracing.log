@@ -1,9 +1,9 @@
 ﻿  Source.cpp
-C:\Users\Elizaveta\c++\RayTracing\RayTracing\Sphere.hpp(34,49): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\Elizaveta\c++\RayTracing\RayTracing\Sphere.hpp(34,15): error C2677: binary '*': no global operator found which takes type 'vec3d<float>' (or there is no acceptable conversion)
-C:\Users\Elizaveta\c++\RayTracing\RayTracing\Source.cpp(42,11): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\Elizaveta\c++\RayTracing\RayTracing\Source.cpp(43,11): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\Elizaveta\c++\RayTracing\RayTracing\Source.cpp(57,33): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Elizaveta\c++\RayTracing\RayTracing\Source.cpp(87,58): error C2677: binary '*': no global operator found which takes type 'vec3d<float>' (or there is no acceptable conversion)
-C:\Users\Elizaveta\c++\RayTracing\RayTracing\Source.cpp(87,1): error C2660: 'Sphere::is_hitted': function does not take 1 arguments
-C:\Users\Elizaveta\c++\RayTracing\RayTracing\Sphere.hpp(12,9): message : see declaration of 'Sphere::is_hitted'
+C:\Users\Elizaveta\c++\RayTracing\RayTracing\Source.cpp(42,11): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Elizaveta\c++\RayTracing\RayTracing\Source.cpp(43,11): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  Generating code
+  2 of 1337 functions ( 0.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    2 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  RayTracing.vcxproj -> C:\Users\Elizaveta\c++\RayTracing\x64\Release\RayTracing.exe

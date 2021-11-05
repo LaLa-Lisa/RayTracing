@@ -21,9 +21,8 @@ public:
 
 	//проверяет всё ли хорошо с камерой
 	bool is_orthonormal() {
-
-		// ...code....
-
+		if ((c_x.lenght() - 1) > 10e-3 || (c_y.lenght() - 1) > 10e-3 || (c_z.lenght() - 1) > 10e-3) return false;
+		if (abs(c_x * c_y) > 10e-3 || abs(c_x * c_z) > 10e-3 || abs(c_y * c_z) > 10e-3) return false;
 		return true;
 	}
 };
