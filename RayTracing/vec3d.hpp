@@ -21,12 +21,6 @@ public:
 		y /= len;
 		z /= len;
 	}
-
-	void rotateYZ(T rot_angle) {
-		y = y * cos(rot_angle) - z * sin(rot_angle);
-		z = y * sin(rot_angle) + z * cos(rot_angle);
-		this->normalize();
-	}
 };
 
 template<typename T>
@@ -36,6 +30,10 @@ T operator* (const vec3d<T>& vec1, const vec3d<T>& vec2) {
 
 template<typename T>
 vec3d<T> operator* (const T scalar, const vec3d<T>& vec) {
+	return vec3d<T>(scalar * vec.x, scalar * vec.y, scalar * vec.z);
+}
+template<typename T>
+vec3d<T> operator* (const vec3d<T>& vec, const T scalar) {
 	return vec3d<T>(scalar * vec.x, scalar * vec.y, scalar * vec.z);
 }
 
@@ -61,6 +59,12 @@ template<typename T>
 std::ostream& operator<<(std::ostream& stream, const vec3d<T>& vec) {
 	stream << vec.x << " " << vec.y << " " << vec.z << "\n";
 	return stream;
+}
+
+template<typename T>
+vec3d<T> rotateByAxis(vec3d<T>& axis, vec3d<T>& vec, T angle) {
+	axis.normalize();
+	return vec * cos(angle) + cross_product(axis, vec) * sin(angle) + axis * (axis * vec) * (1 - cos(angle));
 }
 
 

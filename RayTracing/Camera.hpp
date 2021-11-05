@@ -26,9 +26,4 @@ public:
 
 		return true;
 	}
-
-	void rotateYZ(double rot_angle) {
-		this->c_z.rotateYZ(rot_angle);
-		this->c_y.rotateYZ(rot_angle);
-	}
 };

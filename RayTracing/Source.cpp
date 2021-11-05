@@ -9,10 +9,6 @@
 #include "Camera.hpp"
 #include "Sphere.hpp"
 
-
-//#define min(a,b)  (((a) < (b)) ? (a) : (b))
-//#define max(a,b)  (((a) > (b)) ? (a) : (b))
-//#define PI 3.14159265358979323846
 auto convert_to_rad = [](double angle) { return angle * PI / 180.0; };
 
 
@@ -134,7 +130,8 @@ public:
 	bool OnUserUpdate(float fElapsedTime) override
 	{
 		std::vector<std::vector<olc::Pixel>> imageP = scene.make_picture();
-		scene.camera.rotateYZ(0.01);
+		scene.camera.c_y = rotateByAxis(scene.camera.c_x, scene.camera.c_y, 0.01);
+		scene.camera.c_z = rotateByAxis(scene.camera.c_x, scene.camera.c_z, 0.01);
 		this->print(imageP);
 		return true;
 	}
