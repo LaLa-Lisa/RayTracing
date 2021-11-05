@@ -1,4 +1,6 @@
+#pragma once
 #include <iostream>
+//#define double float
 
 template<typename T>
 class vec3d {
