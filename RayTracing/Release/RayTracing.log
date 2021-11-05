@@ -1,0 +1,15 @@
+﻿  Source.cpp
+C:\Users\aleka\source\repos\RayTracing\RayTracing\Source.cpp(79,11): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
+C:\Users\aleka\source\repos\RayTracing\RayTracing\Source.cpp(80,11): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
+C:\Users\aleka\source\repos\RayTracing\RayTracing\Source.cpp(93,33): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+C:\Users\aleka\source\repos\RayTracing\RayTracing\Source.cpp(143,23): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\aleka\source\repos\RayTracing\RayTracing\Source.cpp(143,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\aleka\source\repos\RayTracing\RayTracing\Source.cpp(144,24): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\aleka\source\repos\RayTracing\RayTracing\Source.cpp(144,22): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\aleka\source\repos\RayTracing\RayTracing\Source.cpp(160,1): warning C4305: аргумент: усечение из "double" в "float"
+  Создание кода
+  52 of 1260 functions ( 4.1%) were compiled, the rest were copied from previous compilation.
+    18 functions were new in current compilation
+    33 functions had inline decision re-evaluated but remain unchanged
+  Создание кода завершено
+  RayTracing.vcxproj -> C:\Users\aleka\source\repos\RayTracing\Release\RayTracing.exe

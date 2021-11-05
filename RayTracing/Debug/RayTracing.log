@@ -1,0 +1,8 @@
+﻿  Source.cpp
+C:\Users\aleka\source\repos\RayTracing\RayTracing\Source.cpp(93,11): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+C:\Users\aleka\source\repos\RayTracing\RayTracing\Source.cpp(94,11): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+C:\Users\aleka\source\repos\RayTracing\RayTracing\Source.cpp(154,23): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\aleka\source\repos\RayTracing\RayTracing\Source.cpp(154,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\aleka\source\repos\RayTracing\RayTracing\Source.cpp(155,24): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\aleka\source\repos\RayTracing\RayTracing\Source.cpp(155,22): warning C4018: <: несоответствие типов со знаком и без знака
+  RayTracing.vcxproj -> C:\Users\aleka\source\repos\RayTracing\Debug\RayTracing.exe
