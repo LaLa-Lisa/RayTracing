@@ -1,0 +1,10 @@
+﻿  Source.cpp
+C:\Users\aleka\source\repos\RayTracing\RayTracing\Source.cpp(79,11): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
+C:\Users\aleka\source\repos\RayTracing\RayTracing\Source.cpp(80,11): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
+C:\Users\aleka\source\repos\RayTracing\RayTracing\Source.cpp(93,33): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+C:\Users\aleka\source\repos\RayTracing\RayTracing\Source.cpp(157,1): warning C4305: аргумент: усечение из "double" в "float"
+  Создание кода
+  Previous IPDB not found, fall back to full compilation.
+  All 1245 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Создание кода завершено
+  RayTracing.vcxproj -> C:\Users\aleka\source\repos\RayTracing\x64\Release\RayTracing.exe
