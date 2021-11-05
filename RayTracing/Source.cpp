@@ -129,9 +129,45 @@ public:
 	}
 	bool OnUserUpdate(float fElapsedTime) override
 	{
+		if (GetMouse(0).bHeld)
+		{
+			std::pair<double, double> newMousePos = { GetMouseX(), GetMouseY() };
+			double diffX = newMousePos.first - previousMousePos.first;
+			double diffY = newMousePos.second - previousMousePos.second;
+
+			vec3d<double> etalon_y(0, 0, 1);
+
+			scene.camera.c_x = rotateByAxis(scene.camera.c_x, scene.camera.c_x, diffY / 200);
+			scene.camera.c_y = rotateByAxis(scene.camera.c_x, scene.camera.c_y, diffY / 200);
+			scene.camera.c_z = rotateByAxis(scene.camera.c_x, scene.camera.c_z, diffY / 200);
+
+			scene.camera.c_x = rotateByAxis(etalon_y, scene.camera.c_x, diffX / 200);
+			scene.camera.c_y = rotateByAxis(etalon_y, scene.camera.c_y, diffX / 200);
+			scene.camera.c_z = rotateByAxis(etalon_y, scene.camera.c_z, diffX / 200);
+
+			previousMousePos = newMousePos;
+		}
+		else {
+			previousMousePos = { GetMouseX(), GetMouseY() };
+		}
+
+		double step = 1;
+		if (GetKey(olc::Key::W).bHeld) {
+			scene.camera.c_point = scene.camera.c_point + step * scene.camera.c_z;
+		}
+		if (GetKey(olc::Key::A).bHeld) {
+			scene.camera.c_point = scene.camera.c_point + -1.0 * step * scene.camera.c_x;
+		}
+		if (GetKey(olc::Key::S).bHeld) {
+			scene.camera.c_point = scene.camera.c_point + -1.0 * step * scene.camera.c_z;
+		}
+		if (GetKey(olc::Key::D).bHeld) {
+			scene.camera.c_point = scene.camera.c_point + step * scene.camera.c_x;
+		}
+
+
+
 		std::vector<std::vector<olc::Pixel>> imageP = scene.make_picture();
-		scene.camera.c_y = rotateByAxis(scene.camera.c_x, scene.camera.c_y, 0.01);
-		scene.camera.c_z = rotateByAxis(scene.camera.c_x, scene.camera.c_z, 0.01);
 		this->print(imageP);
 		return true;
 	}
@@ -141,18 +177,20 @@ private:
 	const int width = -1;
 	const int height = -1;
 	clock_t Lasttime = clock();
+	bool mousePushed = false;
+	std::pair<double, double> previousMousePos = {0, 0};
 };
 
 
 int main()
 {
-	vec3d<double> a(3, 3, 20);
+	vec3d<double> a(3, 3, 50);
 	vec3d<double> b(1, 0, 0);
 	vec3d<double> c(0, 1, 0);
 	vec3d<double> d(0, 0, 1);
 	Camera camera(a, b, c, d);
-	Display demo(720, 720, camera);
-	if (demo.Construct(720, 720, 1, 1))
+	Display demo(1000, 1000, camera);
+	if (demo.Construct(1000, 1000, 1, 1))
 		demo.Start();
 
 	return 0;

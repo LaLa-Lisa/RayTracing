@@ -62,7 +62,7 @@ std::ostream& operator<<(std::ostream& stream, const vec3d<T>& vec) {
 }
 
 template<typename T>
-vec3d<T> rotateByAxis(vec3d<T>& axis, vec3d<T>& vec, T angle) {
+vec3d<T> rotateByAxis(vec3d<T>& axis, vec3d<T>& vec, double angle) {
 	axis.normalize();
 	return vec * cos(angle) + cross_product(axis, vec) * sin(angle) + axis * (axis * vec) * (1 - cos(angle));
 }
