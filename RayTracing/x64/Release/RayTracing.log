@@ -1,9 +1,9 @@
 ﻿  Source.cpp
-C:\Users\aleka\source\repos\RayTracing\RayTracing\Source.cpp(45,11): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
-C:\Users\aleka\source\repos\RayTracing\RayTracing\Source.cpp(46,11): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
-  Создание кода
-  0 of 1242 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
-  Создание кода завершено
-  RayTracing.vcxproj -> C:\Users\aleka\source\repos\RayTracing\x64\Release\RayTracing.exe
+C:\Users\Elizaveta\c++\RayTracing\RayTracing\Source.cpp(46,11): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Elizaveta\c++\RayTracing\RayTracing\Source.cpp(47,11): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  Generating code
+  63 of 1326 functions ( 4.8%) were compiled, the rest were copied from previous compilation.
+    53 functions were new in current compilation
+    64 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  RayTracing.vcxproj -> C:\Users\Elizaveta\c++\RayTracing\x64\Release\RayTracing.exe

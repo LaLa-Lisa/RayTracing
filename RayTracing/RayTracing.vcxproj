@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClInclude Include="Camera.hpp" />
     <ClInclude Include="olcPixelGameEngine.h" />
+    <ClInclude Include="Sphere.hpp" />
     <ClInclude Include="vec3d.hpp" />
   </ItemGroup>
   <ItemGroup>

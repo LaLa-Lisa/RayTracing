@@ -7,11 +7,12 @@
 #include <string>
 #include "vec3d.hpp"
 #include "Camera.hpp"
+#include "Sphere.hpp"
 
 
-#define min(a,b)  (((a) < (b)) ? (a) : (b))
-#define max(a,b)  (((a) > (b)) ? (a) : (b))
-#define PI 3.14159265358979323846
+//#define min(a,b)  (((a) < (b)) ? (a) : (b))
+//#define max(a,b)  (((a) > (b)) ? (a) : (b))
+//#define PI 3.14159265358979323846
 auto convert_to_rad = [](double angle) { return angle * PI / 180.0; };
 
 
@@ -49,6 +50,7 @@ private:
 	}
 public:
 	Camera camera;
+	std::vector<Sphere> balls;
 
 	//конструктор
 	Scene(Camera _camera, const int _width, const int _height)
@@ -83,13 +85,23 @@ public:
 
 				vec3d<double> ray = scr_dot - camera.c_point;
 
-				//ocl::Pixel col(0, 0, 1);
-				//std::cout << is_floor(camera.c_point, ray) ? "#" : " ";
-				res[i][j] = is_floor(camera.c_point, ray) ? olc::WHITE : olc::BLUE;
+				olc::Pixel color = olc::BLUE;
+				color = is_floor(camera.c_point, ray) ? olc::WHITE : olc::BLUE;
+				for (auto& sph : balls) {
+					double intense = sph.is_hitted(camera.c_point, ray);
+					if (intense) {
+						color = olc::Pixel((int)(intense * 80) % 255, (int)(intense * 80) * 1000 % 255, (int)(intense * 80) * 100 % 255);
+					}
+				}
+				res[i][j] = color;
 			}
 		}
 
 		return res;
+	}
+
+	void add_ball(vec3d<double> _center, double _radius) {
+		balls.push_back(Sphere(_center, _radius));
 	}
 };
 
@@ -101,6 +113,8 @@ public:
 		height(_height), 
 		scene(Scene(camera, _width, _height))
 	{
+		vec3d<double> ball_center(0, -20, 2);
+		scene.add_ball(ball_center, 5);
 	}
 	void print(std::vector<std::vector<olc::Pixel>> image) {
 		for (int i = 0; i < min(image.size(), width); ++i) {
