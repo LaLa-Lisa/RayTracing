@@ -8,6 +8,7 @@
 #include "vec3d.hpp"
 #include "Camera.hpp"
 #include "Sphere.hpp"
+#include <thread>
 
 auto convert_to_rad = [](double angle) { return angle * PI / 180.0; };
 
@@ -66,6 +67,7 @@ public:
 
 		std::vector<std::vector<olc::Pixel>> res(width);
 
+		
 		for (int i = 0; i < width; ++i)
 		{
 			res[i].resize(height);
@@ -93,12 +95,55 @@ public:
 					}
 				}
 				res[i][j] = color;
+				//res[i][j] = doWork(i, j);
 			}
 		}
+
+		/*
+		std::thread th1(&Scene::part_makePicture, this, 0, width / 4,             height, std::ref(res));
+		std::thread th2(&Scene::part_makePicture, this, width / 4, width / 2,     height, std::ref(res));
+		std::thread th3(&Scene::part_makePicture, this, width / 2, width * 3 / 4, height, std::ref(res));
+		std::thread th4(&Scene::part_makePicture, this, width * 3 / 4, width,     height, std::ref(res));
+		th1.join();
+		th2.join();
+		th3.join();
+		th4.join();
+		*/
 
 		return res;
 	}
 
+	olc::Pixel doWork(int i, int j) {
+		// преобразование к локальным вещественным координатам
+		double scr_loc_x = (double)j * coeff_height - scr_size / 2;
+		double scr_loc_y = (double)(width - i) * coeff_width - scr_size / 2;
+
+		// получение глобальной координаты точки на экране
+		vec3d<double> scr_dot = camera.c_point + camera.cs_dist * camera.c_z + scr_loc_x * camera.c_x + scr_loc_y * camera.c_y;
+
+		vec3d<double> ray = scr_dot - camera.c_point;
+
+		olc::Pixel color = olc::BLUE;
+		color = is_floor(camera.c_point, ray) ? olc::WHITE : olc::BLUE;
+		for (auto& sph : balls) {
+			double intense = sph.is_hitted(camera.c_point, -1.0 * ray);
+			if (intense) {
+				double col_intense = intense / ((camera.c_point - sph.center).lenght());
+				olc::Pixel col_white(255 - (int)(col_intense * 1000) % 255, 255 - (int)(col_intense * 1000) % 255, 255 - (int)(col_intense * 1000) % 255);
+				olc::Pixel col_blue(0, 0, 255 - (int)(col_intense * 1000) % 255);
+				color = is_floor(camera.c_point, sph.reflect_hit(intense, camera.c_point, ray)) ? col_white : col_blue;
+			}
+		}
+		return color;
+	}
+	void part_makePicture(int st_width, int en_width, int height, std::vector<std::vector<olc::Pixel>>& inPut) {
+		for (int i = st_width; i < en_width; ++i) {
+			inPut[i].resize(height);
+			for (int j = 0; j < height; ++j)
+				inPut[i][j] = doWork(i, j);
+		}
+	}
+	
 	void add_ball(vec3d<double> _center, double _radius) {
 		balls.push_back(Sphere(_center, _radius));
 	}
@@ -116,7 +161,7 @@ public:
 		scene.add_ball(ball_center, 5);
 		//scene.add_ball(vec3d<double>(10, -10, 20), 2);
 	}
-	void print(std::vector<std::vector<olc::Pixel>> image) {
+	void print(std::vector<std::vector<olc::Pixel>>& image) {
 		for (int i = 0; i < min(image.size(), width); ++i) {
 			for (int j = 0; j < min(image[i].size(), height); ++j) {
 				Draw(j, i, image[i][j]);
