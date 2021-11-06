@@ -31,9 +31,8 @@ private:
 	double tile_size = 5;
 
 	bool is_floor(vec3d<double>& ray_start_point, vec3d<double>& ray) {
-		double floor_level = 0;
-		if (ray.z * ray_start_point.z < 0) {
-			double coeff = -1 * ray_start_point.z / ray.z;
+		double coeff = -ray_start_point.z / ray.z;
+		if (coeff > 0) {
 			if (coeff >= camera.render_distance) return false;
 			return is_tile(ray_start_point.x + coeff * ray.x, ray_start_point.y + coeff * ray.y);
 		}
@@ -114,35 +113,35 @@ public:
 		return res;
 	}
 	
-	olc::Pixel doWork(int i, int j) {
-		// преобразование к локальным вещественным координатам
-		double scr_loc_x = (double)j * coeff_height - scr_size / 2;
-		double scr_loc_y = (double)(width - i) * coeff_width - scr_size / 2;
-
-		// получение глобальной координаты точки на экране
-		vec3d<double> scr_dot = camera.c_point + camera.cs_dist * camera.c_z + scr_loc_x * camera.c_x + scr_loc_y * camera.c_y;
-
-		vec3d<double> ray = scr_dot - camera.c_point;
-
-		olc::Pixel color = is_floor(camera.c_point, ray) ? olc::WHITE : olc::BLUE;
-		for (auto& sph : balls) {
-			auto tmp = -1.0 * ray;
-			double intense = sph.is_hitted(camera.c_point, tmp);
-			if (intense) {
-				double col_intense = intense / ((camera.c_point - sph.center).lenght());
-				olc::Pixel col_white(255 - (int)(col_intense * 1000) % 255, 255 - (int)(col_intense * 1000) % 255, 255 - (int)(col_intense * 1000) % 255);
-				olc::Pixel col_blue(0, 0, 255 - (int)(col_intense * 1000) % 255);
-				auto rotatedVec = sph.reflect_hit(intense, camera.c_point, ray);
-				color = is_floor(camera.c_point, rotatedVec) ? col_white : col_blue;
-			}
-		}
-		return color;
-	}
 	void part_makePicture(int st_width, int en_width, int height, std::vector<std::vector<olc::Pixel>>& inPut) {
 		for (int i = st_width; i < en_width; ++i) {
 			inPut[i].resize(height);
-			for (int j = 0; j < height; ++j)
-				inPut[i][j] = doWork(i, j);
+			for (int j = 0; j < height; ++j) {
+
+				// преобразование к локальным вещественным координатам
+				double scr_loc_x = (double)j * coeff_height - scr_size / 2;
+				double scr_loc_y = (double)(width - i) * coeff_width - scr_size / 2;
+
+				// получение глобальной координаты точки на экране
+				vec3d<double> scr_dot = camera.c_point + camera.cs_dist * camera.c_z + scr_loc_x * camera.c_x + scr_loc_y * camera.c_y;
+
+				vec3d<double> ray = scr_dot - camera.c_point;
+
+				olc::Pixel color = is_floor(camera.c_point, ray) ? olc::WHITE : olc::BLUE;
+				for (auto& sph : balls) {
+					auto tmp = -1.0 * ray;
+					double intense = sph.is_hitted(camera.c_point, tmp);
+					if (intense) {
+						double col_intense = intense / ((camera.c_point - sph.center).lenght());
+						olc::Pixel col_white(255 - (int)(col_intense * 1000) % 255, 255 - (int)(col_intense * 1000) % 255, 255 - (int)(col_intense * 1000) % 255);
+						olc::Pixel col_blue(0, 0, 255 - (int)(col_intense * 1000) % 255);
+						auto rotatedVec = sph.reflect_hit(intense, camera.c_point, ray);
+						color = is_floor(camera.c_point, rotatedVec) ? col_white : col_blue;
+					}
+				}
+				inPut[i][j] = color;
+
+			}
 		}
 	}
 	

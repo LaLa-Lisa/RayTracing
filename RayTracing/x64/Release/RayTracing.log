@@ -1,9 +1,8 @@
 ﻿  Source.cpp
+C:\Users\aleka\source\repos\RayTracing\RayTracing\Source.cpp(42,11): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
 C:\Users\aleka\source\repos\RayTracing\RayTracing\Source.cpp(43,11): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
-C:\Users\aleka\source\repos\RayTracing\RayTracing\Source.cpp(44,11): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
   Создание кода
-  6 of 1285 functions ( 0.5%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
+  Previous IPDB and IOBJ mismatch, fall back to full compilation.
+  All 1285 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   Создание кода завершено
   RayTracing.vcxproj -> C:\Users\aleka\source\repos\RayTracing\x64\Release\RayTracing.exe
