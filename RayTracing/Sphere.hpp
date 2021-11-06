@@ -33,4 +33,9 @@ public:
 
 		return -1.0 * rotateByAxis(res, ray,  (2 * PI - 2 * angleB_CR));
 	}
+	vec3d<double> reflect_lite(double coeff, const vec3d<double>& ray_start_point, vec3d<double>& ray) {
+		vec3d<double> centerToHitPoint = ray_start_point + ray * coeff - this->center;
+		centerToHitPoint.normalize();
+		return ray - 2 * (ray * centerToHitPoint) * centerToHitPoint;
+	}
 };

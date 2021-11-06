@@ -90,7 +90,7 @@ public:
 						double col_intense = intense / ((camera.c_point - sph.center).lenght());
 						olc::Pixel col_white(255 - (int)(col_intense * 1000) % 255, 255 - (int)(col_intense * 1000) % 255, 255 - (int)(col_intense * 1000) % 255);
 						olc::Pixel col_blue(0, 0, 255 - (int)(col_intense * 1000) % 255);
-						auto rotatedVec = sph.reflect_hit(intense, camera.c_point, ray);
+						auto rotatedVec = sph.reflect_lite(intense, camera.c_point, ray);
 						color = is_floor(camera.c_point, rotatedVec) ? col_white : col_blue;
 					}
 				}
@@ -135,7 +135,7 @@ public:
 						double col_intense = intense / ((camera.c_point - sph.center).lenght());
 						olc::Pixel col_white(255 - (int)(col_intense * 1000) % 255, 255 - (int)(col_intense * 1000) % 255, 255 - (int)(col_intense * 1000) % 255);
 						olc::Pixel col_blue(0, 0, 255 - (int)(col_intense * 1000) % 255);
-						auto rotatedVec = sph.reflect_hit(intense, camera.c_point, ray);
+						auto rotatedVec = sph.reflect_lite(intense, camera.c_point, ray);
 						color = is_floor(camera.c_point, rotatedVec) ? col_white : col_blue;
 					}
 				}
