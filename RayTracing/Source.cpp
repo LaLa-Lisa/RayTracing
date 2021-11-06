@@ -95,7 +95,6 @@ public:
 					}
 				}
 				res[i][j] = color;
-				//res[i][j] = doWork(i, j);
 			}
 		}
 
@@ -163,8 +162,10 @@ public:
 		//scene.add_ball(vec3d<double>(10, -10, 20), 2);
 	}
 	void print(std::vector<std::vector<olc::Pixel>>& image) {
-		for (int i = 0; i < min(image.size(), width); ++i) {
-			for (int j = 0; j < min(image[i].size(), height); ++j) {
+		int end1 = min(image.size(), width);
+		int end2 = min(image[0].size(), height);
+		for (int i = 0; i < end1; ++i) {
+			for (int j = 0; j < end2; ++j) {
 				Draw(j, i, image[i][j]);
 			}
 		}
@@ -236,8 +237,8 @@ int main()
 	vec3d<double> c(0, 1, 0);
 	vec3d<double> d(0, 0, 1);
 	Camera camera(a, b, c, d);
-	Display demo(1000, 1000, camera);
-	if (demo.Construct(1000, 1000, 1, 1))
+	Display demo(720, 720, camera);
+	if (demo.Construct(demo.getResolution().second, demo.getResolution().first, 1, 1))
 		demo.Start();
 
 	return 0;
