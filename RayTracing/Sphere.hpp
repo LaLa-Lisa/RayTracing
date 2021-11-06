@@ -9,7 +9,7 @@ public:
 		center(_center),
 		radius(_radius)
 	{}
-	double is_hitted(vec3d<double> ray_start_point, vec3d<double> ray) {
+	double is_hitted(const vec3d<double>& ray_start_point, const vec3d<double>& ray) {
 		vec3d<double> to_center = ray_start_point - center;
 
 		double a = ray.x * ray.x + ray.y * ray.y + ray.z * ray.z;
@@ -24,9 +24,9 @@ public:
 		if (coeff1 <= 0 || coeff2 <= 0) return 0;
 		return min(coeff1, coeff2);
 	}
-	vec3d<double> reflect_hit(double coeff, vec3d<double> ray_start_point, vec3d<double> ray) {
-		vec3d<double> hit_point = ray_start_point + ray * coeff;
-		vec3d<double> centerToHitPoint = hit_point - this->center;
+	vec3d<double> reflect_hit(double coeff, const vec3d<double>& ray_start_point, vec3d<double>& ray) {
+		//vec3d<double> hit_point = ray_start_point + ray * coeff;
+		vec3d<double> centerToHitPoint = ray_start_point + ray * coeff - this->center;
 
 		auto res = cross_product(centerToHitPoint, ray);
 		double angleB_CR =  acos(centerToHitPoint * ray / (centerToHitPoint.lenght() * ray.lenght()));

@@ -1,0 +1,883 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C26439",
+          "message": {
+            "text": "Эта функция не может \"throw\". Объявите ее как \"noexcept\" (f.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/aleka/source/repos/RayTracing/RayTracing/olcPixelGameEngine.h"
+                },
+                "region": {
+                  "startLine": 790,
+                  "startColumn": 3,
+                  "endLine": 790,
+                  "endColumn": 3
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "??0Renderable@olc@@QEAA@$$QEAV01@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C26812",
+          "message": {
+            "text": "Тип перечисления \"olc::Sprite::Mode\" не входит в область. Старайтесь использовать \"enum class\" вместо \"enum\" (Enum.3)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/aleka/source/repos/RayTracing/RayTracing/olcPixelGameEngine.h"
+                },
+                "region": {
+                  "startLine": 750,
+                  "startColumn": 27
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "??0Sprite@olc@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Арифметическое переполнение: использование оператора \"*\" на байтовом значении 4 и приведение результата к байтовому значению 8. Приведите значение к более широкому типу перед вызовом оператора \"*\", чтобы избежать переполнения (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/aleka/source/repos/RayTracing/RayTracing/olcPixelGameEngine.h"
+                },
+                "region": {
+                  "startLine": 1287,
+                  "startColumn": 19,
+                  "endLine": 1287,
+                  "endColumn": 27
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "??0Sprite@olc@@QEAA@HH@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Арифметическое переполнение: использование оператора \"*\" на байтовом значении 4 и приведение результата к байтовому значению 8. Приведите значение к более широкому типу перед вызовом оператора \"*\", чтобы избежать переполнения (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/aleka/source/repos/RayTracing/RayTracing/olcPixelGameEngine.h"
+                },
+                "region": {
+                  "startLine": 1288,
+                  "startColumn": 19,
+                  "endLine": 1288,
+                  "endColumn": 27
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "??0Sprite@olc@@QEAA@HH@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Арифметическое переполнение: использование оператора \"+\" на байтовом значении 4 и приведение результата к байтовому значению 8. Приведите значение к более широкому типу перед вызовом оператора \"+\", чтобы избежать переполнения (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/aleka/source/repos/RayTracing/RayTracing/olcPixelGameEngine.h"
+                },
+                "region": {
+                  "startLine": 1314,
+                  "startColumn": 20,
+                  "endLine": 1314,
+                  "endColumn": 54
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?GetPixel@Sprite@olc@@QEBA?AUPixel@2@HH@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Арифметическое переполнение: использование оператора \"*\" на байтовом значении 4 и приведение результата к байтовому значению 8. Приведите значение к более широкому типу перед вызовом оператора \"*\", чтобы избежать переполнения (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/aleka/source/repos/RayTracing/RayTracing/olcPixelGameEngine.h"
+                },
+                "region": {
+                  "startLine": 1314,
+                  "startColumn": 20,
+                  "endLine": 1314,
+                  "endColumn": 38
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?GetPixel@Sprite@olc@@QEBA?AUPixel@2@HH@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Арифметическое переполнение: использование оператора \"+\" на байтовом значении 4 и приведение результата к байтовому значению 8. Приведите значение к более широкому типу перед вызовом оператора \"+\", чтобы избежать переполнения (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/aleka/source/repos/RayTracing/RayTracing/olcPixelGameEngine.h"
+                },
+                "region": {
+                  "startLine": 1308,
+                  "startColumn": 21,
+                  "endLine": 1308,
+                  "endColumn": 33
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?GetPixel@Sprite@olc@@QEBA?AUPixel@2@HH@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Арифметическое переполнение: использование оператора \"*\" на байтовом значении 4 и приведение результата к байтовому значению 8. Приведите значение к более широкому типу перед вызовом оператора \"*\", чтобы избежать переполнения (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/aleka/source/repos/RayTracing/RayTracing/olcPixelGameEngine.h"
+                },
+                "region": {
+                  "startLine": 1308,
+                  "startColumn": 21,
+                  "endLine": 1308,
+                  "endColumn": 25
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?GetPixel@Sprite@olc@@QEBA?AUPixel@2@HH@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Арифметическое переполнение: использование оператора \"+\" на байтовом значении 4 и приведение результата к байтовому значению 8. Приведите значение к более широкому типу перед вызовом оператора \"+\", чтобы избежать переполнения (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/aleka/source/repos/RayTracing/RayTracing/olcPixelGameEngine.h"
+                },
+                "region": {
+                  "startLine": 1322,
+                  "startColumn": 13,
+                  "endLine": 1322,
+                  "endColumn": 25
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?SetPixel@Sprite@olc@@QEAA_NHHUPixel@2@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Арифметическое переполнение: использование оператора \"*\" на байтовом значении 4 и приведение результата к байтовому значению 8. Приведите значение к более широкому типу перед вызовом оператора \"*\", чтобы избежать переполнения (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/aleka/source/repos/RayTracing/RayTracing/olcPixelGameEngine.h"
+                },
+                "region": {
+                  "startLine": 1322,
+                  "startColumn": 13,
+                  "endLine": 1322,
+                  "endColumn": 17
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?SetPixel@Sprite@olc@@QEAA_NHHUPixel@2@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C26812",
+          "message": {
+            "text": "Тип перечисления \"olc::rcode\" не входит в область. Старайтесь использовать \"enum class\" вместо \"enum\" (Enum.3)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/aleka/source/repos/RayTracing/RayTracing/olcPixelGameEngine.h"
+                },
+                "region": {
+                  "startLine": 1365,
+                  "startColumn": 3,
+                  "endLine": 1365,
+                  "endColumn": 54
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?LoadFromFile@Sprite@olc@@QEAA?AW4rcode@2@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAVResourcePack@2@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Арифметическое переполнение: использование оператора \"*\" на байтовом значении 4 и приведение результата к байтовому значению 8. Приведите значение к более широкому типу перед вызовом оператора \"*\", чтобы избежать переполнения (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/aleka/source/repos/RayTracing/RayTracing/olcPixelGameEngine.h"
+                },
+                "region": {
+                  "startLine": 1371,
+                  "startColumn": 42,
+                  "endLine": 1371,
+                  "endColumn": 50
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?Duplicate@Sprite@olc@@QEAAPEAV12@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C26812",
+          "message": {
+            "text": "Тип перечисления \"olc::Pixel::Mode\" не входит в область. Старайтесь использовать \"enum class\" вместо \"enum\" (Enum.3)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/aleka/source/repos/RayTracing/RayTracing/olcPixelGameEngine.h"
+                },
+                "region": {
+                  "startLine": 1055,
+                  "startColumn": 35,
+                  "endLine": 1055,
+                  "endColumn": 35
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "??0PixelGameEngine@olc@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C26812",
+          "message": {
+            "text": "Тип перечисления \"olc::Key\" не входит в область. Старайтесь использовать \"enum class\" вместо \"enum\" (Enum.3)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/aleka/source/repos/RayTracing/RayTracing/olcPixelGameEngine.h"
+                },
+                "region": {
+                  "startLine": 1785,
+                  "startColumn": 28,
+                  "endLine": 1785,
+                  "endColumn": 28
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?GetKey@PixelGameEngine@olc@@QEBA?AUHWButton@2@W4Key@2@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Арифметическое переполнение: использование оператора \"-\" на байтовом значении 4 и приведение результата к байтовому значению 8. Приведите значение к более широкому типу перед вызовом оператора \"-\", чтобы избежать переполнения (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/aleka/source/repos/RayTracing/RayTracing/olcPixelGameEngine.h"
+                },
+                "region": {
+                  "startLine": 2617,
+                  "startColumn": 138,
+                  "endLine": 2617,
+                  "endColumn": 142
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?DrawStringPropDecal@PixelGameEngine@olc@@QEAAXAEBU?$v2d_generic@M@2@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@UPixel@2@0@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Арифметическое переполнение: использование оператора \"-\" на байтовом значении 4 и приведение результата к байтовому значению 8. Приведите значение к более широкому типу перед вызовом оператора \"-\", чтобы избежать переполнения (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/aleka/source/repos/RayTracing/RayTracing/olcPixelGameEngine.h"
+                },
+                "region": {
+                  "startLine": 2617,
+                  "startColumn": 85,
+                  "endLine": 2617,
+                  "endColumn": 89
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?DrawStringPropDecal@PixelGameEngine@olc@@QEAAXAEBU?$v2d_generic@M@2@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@UPixel@2@0@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Арифметическое переполнение: использование оператора \"-\" на байтовом значении 4 и приведение результата к байтовому значению 8. Приведите значение к более широкому типу перед вызовом оператора \"-\", чтобы избежать переполнения (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/aleka/source/repos/RayTracing/RayTracing/olcPixelGameEngine.h"
+                },
+                "region": {
+                  "startLine": 2618,
+                  "startColumn": 34,
+                  "endLine": 2618,
+                  "endColumn": 38
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?DrawStringPropDecal@PixelGameEngine@olc@@QEAAXAEBU?$v2d_generic@M@2@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@UPixel@2@0@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Арифметическое переполнение: использование оператора \"-\" на байтовом значении 4 и приведение результата к байтовому значению 8. Приведите значение к более широкому типу перед вызовом оператора \"-\", чтобы избежать переполнения (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/aleka/source/repos/RayTracing/RayTracing/olcPixelGameEngine.h"
+                },
+                "region": {
+                  "startLine": 2655,
+                  "startColumn": 152,
+                  "endLine": 2655,
+                  "endColumn": 156
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?DrawRotatedStringPropDecal@PixelGameEngine@olc@@QEAAXAEBU?$v2d_generic@M@2@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@M0UPixel@2@0@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Арифметическое переполнение: использование оператора \"-\" на байтовом значении 4 и приведение результата к байтовому значению 8. Приведите значение к более широкому типу перед вызовом оператора \"-\", чтобы избежать переполнения (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/aleka/source/repos/RayTracing/RayTracing/olcPixelGameEngine.h"
+                },
+                "region": {
+                  "startLine": 2655,
+                  "startColumn": 99,
+                  "endLine": 2655,
+                  "endColumn": 103
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?DrawRotatedStringPropDecal@PixelGameEngine@olc@@QEAAXAEBU?$v2d_generic@M@2@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@M0UPixel@2@0@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Арифметическое переполнение: использование оператора \"-\" на байтовом значении 4 и приведение результата к байтовому значению 8. Приведите значение к более широкому типу перед вызовом оператора \"-\", чтобы избежать переполнения (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/aleka/source/repos/RayTracing/RayTracing/olcPixelGameEngine.h"
+                },
+                "region": {
+                  "startLine": 2656,
+                  "startColumn": 34,
+                  "endLine": 2656,
+                  "endColumn": 38
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?DrawRotatedStringPropDecal@PixelGameEngine@olc@@QEAAXAEBU?$v2d_generic@M@2@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@M0UPixel@2@0@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Арифметическое переполнение: использование оператора \"-\" на байтовом значении 4 и приведение результата к байтовому значению 8. Приведите значение к более широкому типу перед вызовом оператора \"-\", чтобы избежать переполнения (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/aleka/source/repos/RayTracing/RayTracing/olcPixelGameEngine.h"
+                },
+                "region": {
+                  "startLine": 2729,
+                  "startColumn": 31,
+                  "endLine": 2729,
+                  "endColumn": 35
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?GetTextSizeProp@PixelGameEngine@olc@@QEAA?AU?$v2d_generic@H@2@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Арифметическое переполнение: использование оператора \"-\" на байтовом значении 4 и приведение результата к байтовому значению 8. Приведите значение к более широкому типу перед вызовом оператора \"-\", чтобы избежать переполнения (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/aleka/source/repos/RayTracing/RayTracing/olcPixelGameEngine.h"
+                },
+                "region": {
+                  "startLine": 2765,
+                  "startColumn": 43,
+                  "endLine": 2765,
+                  "endColumn": 47
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?DrawStringProp@PixelGameEngine@olc@@QEAAXHHAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@UPixel@2@I@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Арифметическое переполнение: использование оператора \"-\" на байтовом значении 4 и приведение результата к байтовому значению 8. Приведите значение к более широкому типу перед вызовом оператора \"-\", чтобы избежать переполнения (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/aleka/source/repos/RayTracing/RayTracing/olcPixelGameEngine.h"
+                },
+                "region": {
+                  "startLine": 2767,
+                  "startColumn": 59,
+                  "endLine": 2767,
+                  "endColumn": 63
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?DrawStringProp@PixelGameEngine@olc@@QEAAXHHAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@UPixel@2@I@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Арифметическое переполнение: использование оператора \"-\" на байтовом значении 4 и приведение результата к байтовому значению 8. Приведите значение к более широкому типу перед вызовом оператора \"-\", чтобы избежать переполнения (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/aleka/source/repos/RayTracing/RayTracing/olcPixelGameEngine.h"
+                },
+                "region": {
+                  "startLine": 2774,
+                  "startColumn": 43,
+                  "endLine": 2774,
+                  "endColumn": 47
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?DrawStringProp@PixelGameEngine@olc@@QEAAXHHAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@UPixel@2@I@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Арифметическое переполнение: использование оператора \"-\" на байтовом значении 4 и приведение результата к байтовому значению 8. Приведите значение к более широкому типу перед вызовом оператора \"-\", чтобы избежать переполнения (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/aleka/source/repos/RayTracing/RayTracing/olcPixelGameEngine.h"
+                },
+                "region": {
+                  "startLine": 2776,
+                  "startColumn": 59,
+                  "endLine": 2776,
+                  "endColumn": 63
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?DrawStringProp@PixelGameEngine@olc@@QEAAXHHAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@UPixel@2@I@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Арифметическое переполнение: использование оператора \"-\" на байтовом значении 4 и приведение результата к байтовому значению 8. Приведите значение к более широкому типу перед вызовом оператора \"-\", чтобы избежать переполнения (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/aleka/source/repos/RayTracing/RayTracing/olcPixelGameEngine.h"
+                },
+                "region": {
+                  "startLine": 2779,
+                  "startColumn": 24,
+                  "endLine": 2779,
+                  "endColumn": 28
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?DrawStringProp@PixelGameEngine@olc@@QEAAXHHAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@UPixel@2@I@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Арифметическое переполнение: использование оператора \"*\" на байтовом значении 4 и приведение результата к байтовому значению 8. Приведите значение к более широкому типу перед вызовом оператора \"*\", чтобы избежать переполнения (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/aleka/source/repos/RayTracing/RayTracing/olcPixelGameEngine.h"
+                },
+                "region": {
+                  "startLine": 4081,
+                  "startColumn": 25,
+                  "endLine": 4081,
+                  "endColumn": 41
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?LoadImageResource@ImageLoader_GDIPlus@olc@@UEAA?AW4rcode@2@PEAVSprite@2@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAVResourcePack@2@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Арифметическое переполнение: использование оператора \"-\" на байтовом значении 4 и приведение результата к байтовому значению 8. Приведите значение к более широкому типу перед вызовом оператора \"-\", чтобы избежать переполнения (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/aleka/source/repos/RayTracing/RayTracing/Source.cpp"
+                },
+                "region": {
+                  "startLine": 79,
+                  "startColumn": 33,
+                  "endLine": 79,
+                  "endColumn": 41
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?make_picture@Scene@@QEAA?AV?$vector@V?$vector@UPixel@olc@@V?$allocator@UPixel@olc@@@std@@@std@@V?$allocator@V?$vector@UPixel@olc@@V?$allocator@UPixel@olc@@@std@@@std@@@2@@std@@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Арифметическое переполнение: использование оператора \"-\" на байтовом значении 4 и приведение результата к байтовому значению 8. Приведите значение к более широкому типу перед вызовом оператора \"-\", чтобы избежать переполнения (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/aleka/source/repos/RayTracing/RayTracing/Source.cpp"
+                },
+                "region": {
+                  "startLine": 120,
+                  "startColumn": 31,
+                  "endLine": 120,
+                  "endColumn": 39
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?doWork@Scene@@QEAA?AUPixel@olc@@HH@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.28.29913.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "commandLine": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29910\\bin\\HostX86\\x64\\c1xx.dll\" -ACf{1F7B090C-16DB-4822-966A-A93D26ED4681} -ACpmspft140.dll -Alint -D_PREFAST_ -D_AST_FE_ -Analyze -zm0x00F9B1C0 -il C:\\Users\\aleka\\AppData\\Local\\Temp\\_CL_ca799531ast -typedil -f Source.cpp -Ze -D_MSC_EXTENSIONS -Zp16 -pc \\:/ -D_MSC_VER=1928 -D_MSC_FULL_VER=192829913 -D_MSC_BUILD=0 -D_M_AMD64=100 -ZILP448 -D_M_X64=100 -D_WIN64 -D_WIN32 -GR -D_CPPRTTI -I C:\\Program Files (x86)\\Visual Leak Detector\\include -nologo -W 3 -diagnostics:column -D_GUARDOVERFLOW_CRT_ALLOCATORS=1 -GF -Og -Ot -Oy -Oi -ltcg -DCODE_ANALYSIS -DNDEBUG -D_CONSOLE -D_UNICODE -DUNICODE -EHs -D_CPPUNWIND -EHc -MD -D_MT -D_DLL -GS -D_M_FP_PRECISE -permissive- -Zc:wchar_t -Zc:forScope -Fox64\\Release\\Source.obj -Fdx64\\Release\\vc142.pdb -Gd -analyze:projectdirectory C:\\Users\\aleka\\source\\repos\\RayTracing\\RayTracing -analyze:rulesetdirectory ;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Team Tools\\Static Analysis Tools\\\\Rule Sets; -analyze:ruleset C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Team Tools\\Static Analysis Tools\\Rule Sets\\NativeRecommendedRules.ruleset -analyze:quiet -analyze:plugin C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29910\\bin\\HostX86\\x86\\EspXEngine.dll -FC -errorreport:prompt -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29910\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29910\\atlmfc\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -I C:\\Windows Kits\\10\\Include\\10.0.19041.0\\um -I C:\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -I C:\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -I C:\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um",
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/Users/aleka/source/repos/RayTracing/RayTracing/olcPixelGameEngine.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "72143480c96a991715b74c8d4c16b39e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/aleka/source/repos/RayTracing/RayTracing/Source.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "ee4e67b089517a978623f154feee92a4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/aleka/source/repos/raytracing/raytracing/vec3d.hpp"
+          },
+          "hashes": {
+            "md5": "9d529a34b673f4ada89763856000981c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/aleka/source/repos/raytracing/raytracing/camera.hpp"
+          },
+          "hashes": {
+            "md5": "f17439a7087cb98ed4b3e1cb35a445ad"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/aleka/source/repos/raytracing/raytracing/sphere.hpp"
+          },
+          "hashes": {
+            "md5": "3a8f179768b8616abddbd1910770a65e"
+          }
+        }
+      ]
+    }
+  ]
+}

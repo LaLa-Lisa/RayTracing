@@ -30,7 +30,7 @@ private:
 	//ширина плитки пола (квадрат)
 	double tile_size = 5;
 
-	bool is_floor(vec3d<double> ray_start_point, vec3d<double> ray) {
+	bool is_floor(vec3d<double>& ray_start_point, vec3d<double>& ray) {
 		double floor_level = 0;
 		if (ray.z * ray_start_point.z < 0) {
 			double coeff = -1 * ray_start_point.z / ray.z;
@@ -83,15 +83,16 @@ public:
 
 				vec3d<double> ray = scr_dot - camera.c_point;
 
-				olc::Pixel color = olc::BLUE;
-				color = is_floor(camera.c_point, ray) ? olc::WHITE : olc::BLUE;
+				olc::Pixel color = is_floor(camera.c_point, ray) ? olc::WHITE : olc::BLUE;
 				for (auto& sph : balls) {
-					double intense = sph.is_hitted(camera.c_point, -1.0 * ray);
+					auto tmp = -1.0 * ray;
+					double intense = sph.is_hitted(camera.c_point, tmp);
 					if (intense) {
 						double col_intense = intense / ((camera.c_point - sph.center).lenght());
 						olc::Pixel col_white(255 - (int)(col_intense * 1000) % 255, 255 - (int)(col_intense * 1000) % 255, 255 - (int)(col_intense * 1000) % 255);
 						olc::Pixel col_blue(0, 0, 255 - (int)(col_intense * 1000) % 255);
-						color = is_floor(camera.c_point, sph.reflect_hit(intense, camera.c_point, ray)) ? col_white : col_blue;
+						auto rotatedVec = sph.reflect_hit(intense, camera.c_point, ray);
+						color = is_floor(camera.c_point, rotatedVec) ? col_white : col_blue;
 					}
 				}
 				res[i][j] = color;
@@ -112,7 +113,7 @@ public:
 
 		return res;
 	}
-
+	
 	olc::Pixel doWork(int i, int j) {
 		// преобразование к локальным вещественным координатам
 		double scr_loc_x = (double)j * coeff_height - scr_size / 2;
@@ -123,15 +124,16 @@ public:
 
 		vec3d<double> ray = scr_dot - camera.c_point;
 
-		olc::Pixel color = olc::BLUE;
-		color = is_floor(camera.c_point, ray) ? olc::WHITE : olc::BLUE;
+		olc::Pixel color = is_floor(camera.c_point, ray) ? olc::WHITE : olc::BLUE;
 		for (auto& sph : balls) {
-			double intense = sph.is_hitted(camera.c_point, -1.0 * ray);
+			auto tmp = -1.0 * ray;
+			double intense = sph.is_hitted(camera.c_point, tmp);
 			if (intense) {
 				double col_intense = intense / ((camera.c_point - sph.center).lenght());
 				olc::Pixel col_white(255 - (int)(col_intense * 1000) % 255, 255 - (int)(col_intense * 1000) % 255, 255 - (int)(col_intense * 1000) % 255);
 				olc::Pixel col_blue(0, 0, 255 - (int)(col_intense * 1000) % 255);
-				color = is_floor(camera.c_point, sph.reflect_hit(intense, camera.c_point, ray)) ? col_white : col_blue;
+				auto rotatedVec = sph.reflect_hit(intense, camera.c_point, ray);
+				color = is_floor(camera.c_point, rotatedVec) ? col_white : col_blue;
 			}
 		}
 		return color;
